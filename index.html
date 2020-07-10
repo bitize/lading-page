@@ -35,15 +35,15 @@
         </p>
         <ul>
           <li>
-            <p>15</p>
+            <p id="dias">15</p>
             <p>DIAS</p>
           </li>
-          <li>
-            <p>25</p>
+          <li >
+            <p id="horas">25</p>
             <p>HORAS</p>
           </li>
           <li>
-            <p>15</p>
+            <p id="minutos">15</p>
             <p>MINUTOS</p>
           </li>
         </ul>
@@ -71,5 +71,23 @@
         </ul>
       </div>
     </div>
+    <script type="text/javascript">
+      var data_inicial = new Date('2020-09-07').getTime();
+
+      setInterval(function (){
+      const agora = new Date().getTime();
+      const segundos = (data_inicial - agora) / 1000;
+      const dias = document.getElementById('dias');
+      const horas = document.getElementById('horas');
+      const minutos = document.getElementById('minutos');
+
+      dias.innerHTML= ("0" + parseInt(segundos / 86400)).slice(-2);
+      horas.innerHTML= ("0" + parseInt((segundos % 86400) / 3600)).slice(-2);
+      minutos.innerHTML= ("0" + parseInt((segundos % 3600) / 60)).slice(-2);
+
+      console.log("passou");
+
+      },1000);
+    </script>
   </body>
 </html>
