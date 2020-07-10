@@ -47,6 +47,7 @@ button {
 .content h1 {
   font-weight: 200;
   font-size: 40px;
+  margin-bottom: 8px;
 }
 
 .content h1 strong {
@@ -68,6 +69,10 @@ button {
 .content ul li {
   padding: 8px 16px;
   transition: 1s;
+}
+
+.content ul li p {
+  padding: 0 16px;
 }
 
 .content ul li p:nth-child(1) {
