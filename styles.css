@@ -158,11 +158,11 @@ button {
 
 @media (max-width: 600px) {
   .header {
+    height: 70px;
     justify-content: center;
   }
 
   .header img {
-    margin-top: 16px;
     width: 160px;
   }
 
@@ -179,5 +179,13 @@ button {
     font-size: 16px;
     padding: 8px 0;
     text-align: center;
+  }
+  .footer {
+    height: 70px;
+    padding: 16px;
+  }
+
+  .content ul li p:nth-child(1) {
+    font-size: 54px;
   }
 }
